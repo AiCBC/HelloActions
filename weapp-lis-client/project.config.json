@@ -1,0 +1,17 @@
+{
+  "description": "LIS 微信小程序",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "latest",
+  "appid": "",
+  "projectname": "weapp-lis-client",
+  "condition": {}
+}

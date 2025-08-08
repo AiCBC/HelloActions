@@ -1,0 +1,45 @@
+<view class="card">
+  <view class="label">Wi‑Fi SSID</view>
+  <input class="input" value="{{wifiSsid}}" bindinput="onInputSsid" placeholder="路由器SSID" />
+  <view class="label">Wi‑Fi 密码</view>
+  <input class="input" value="{{wifiPassword}}" password bindinput="onInputPassword" placeholder="密码" />
+  <button class="btn" type="primary" bindtap="onConnectWifi">连接 Wi‑Fi</button>
+</view>
+
+<view class="card">
+  <view class="label">网关地址 (ws/http)</view>
+  <input class="input" value="{{gatewayBase}}" bindinput="onInputGateway" placeholder="例如 ws://192.168.1.10:3001" />
+  <button class="btn" type="primary" bindtap="onConnectWs">连接 WebSocket</button>
+</view>
+
+<view class="card">
+  <view class="label">协议模式</view>
+  <picker mode="selector" range="{{modes}}" value="{{modeIndex}}" bindchange="onModeChange">
+    <view class="input">{{modes[modeIndex]}}</view>
+  </picker>
+  <view class="label">建立连接时发送 ENQ</view>
+  <switch checked="{{sendEnq}}" bindchange="onToggleEnq" />
+  <view class="label">设备 Host</view>
+  <input class="input" value="{{deviceHost}}" bindinput="onInputDeviceHost" placeholder="例如 192.168.1.50" />
+  <view class="label">设备端口</view>
+  <input class="input" value="{{devicePort}}" bindinput="onInputDevicePort" type="number" placeholder="例如 4001" />
+  <button class="btn" type="primary" bindtap="onConnectDevice">连接设备</button>
+  <view style="height:8px"></view>
+  <button class="btn" bindtap="onSendEnq">发送 ENQ</button>
+  <view class="label">发送原始 HEX</view>
+  <input class="input" value="{{rawHex}}" bindinput="onInputRawHex" placeholder="例如 020331..（不含0x, 支持空格）" />
+  <button class="btn" bindtap="onSendRaw">发送 HEX</button>
+</view>
+
+<view class="card">
+  <view class="label">打印机 Host (9100)</view>
+  <input class="input" value="{{printerHost}}" bindinput="onInputPrinterHost" placeholder="例如 192.168.1.60" />
+  <view class="label">打印文本</view>
+  <textarea class="input" value="{{printText}}" bindinput="onInputPrintText" placeholder="输入要打印的文本" />
+  <button class="btn" type="primary" bindtap="onPrint">打印</button>
+</view>
+
+<view class="card">
+  <view class="label">状态</view>
+  <pre>{{statusText}}</pre>
+</view>
