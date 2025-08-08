@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/print/print",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarTitleText": "LIS打印助手",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundTextStyle": "light"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于搜索WiFi"
+    }
+  }
+}

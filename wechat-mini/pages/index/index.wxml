@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="card">
+    <view>WiFi 连接</view>
+    <input placeholder="SSID" bindinput="onSsidInput" value="{{ssid}}" />
+    <input password placeholder="密码" bindinput="onPwdInput" value="{{password}}" />
+    <button type="primary" bindtap="onConnectWifi">连接 WiFi</button>
+    <text>{{wifiMsg}}</text>
+  </view>
+
+  <view class="card">
+    <view>网关配置</view>
+    <input placeholder="网关IP (与小程序同一局域网)" bindinput="onIpInput" value="{{gatewayIp}}" />
+    <input placeholder="网关端口" type="number" bindinput="onPortInput" value="{{gatewayPort}}" />
+    <button bindtap="onSaveGateway">保存</button>
+    <button bindtap="onTestGateway">测试连接 /health</button>
+    <text>{{gatewayMsg}}</text>
+  </view>
+
+  <view class="card">
+    <button bindtap="goPrint">去打印页</button>
+    <button bindtap="goLogs">查看实时日志</button>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="card">
+    <view>WS 事件</view>
+    <block wx:for="{{events}}" wx:key="index">
+      <view>{{item}}</view>
+    </block>
+  </view>
+</view>

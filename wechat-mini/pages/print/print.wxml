@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="card">
+    <view>打印内容</view>
+    <textarea placeholder="输入要打印的文本" bindinput="onText" value="{{text}}" auto-height />
+    <button type="primary" bindtap="onPrint">打印</button>
+    <text>{{msg}}</text>
+  </view>
+</view>
