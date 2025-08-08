@@ -1,0 +1,9 @@
+{
+  "lis_mode": "server",
+  "lis_bind_host": "0.0.0.0",
+  "lis_bind_port": 5000,
+  "ack_mode": "none",
+  "printer_name": null,
+  "print_encoding": "utf-8",
+  "save_raw_messages": true
+}

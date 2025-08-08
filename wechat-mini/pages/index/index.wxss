@@ -1,0 +1,3 @@
+.container{padding:16px}
+.card input{display:block;margin:8px 0}
+.card button{display:block}
